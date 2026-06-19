@@ -1,12 +1,13 @@
 import { useContext, useState } from "react";
 import { assets } from "./../../assets/assets";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router";
 import { StoreContext } from "../../context/StoreContext";
 
 const Navbar = ({ setShowLogin }) => {
   const [menu, setMenu] = useState("home");
   const { getTotalCartAmount, token, setToken } = useContext(StoreContext);
   const navigate = useNavigate();
+  const location = useLocation();
 
   const logout = () => {
     localStorage.removeItem("token");
@@ -27,7 +28,7 @@ const Navbar = ({ setShowLogin }) => {
         <Link
           to="/"
           onClick={() => setMenu("home")}
-          className={`cursor-pointer ${menu === "home" ? "border-b-2" : ""}`}
+          className={`cursor-pointer ${location.pathname === "/" ? "border-b-2" : ""}`}
         >
           Home
         </Link>

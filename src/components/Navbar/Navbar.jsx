@@ -25,7 +25,7 @@ const Navbar = ({ setShowLogin }) => {
       {/* Menu */}
       <ul className="md:flex gap-5 hidden">
         <Link
-          to="/"
+          to="/Food-Delivery"
           onClick={() => setMenu("home")}
           className={`cursor-pointer ${menu === "home" ? "border-b-2" : ""}`}
         >

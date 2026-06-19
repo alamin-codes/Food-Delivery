@@ -94,3 +94,5 @@ STRIPE_SECRET_KEY=your_stripe_secret_key
 ## Author
 
 Al Amin Islam
+
+![Demo](./src/assets/Food%20delivery.gif)
